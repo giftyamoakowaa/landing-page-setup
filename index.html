@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="src/App.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
   </head>
   <body>
@@ -15,13 +17,17 @@
   <nav>
     <img id="logo" src="assets/logo/tlaw-high-resolution-logo-transparent.png" alt="logo" />
     <div id="nav-links">
-      <span>Home</span>
-      <span>About</span>
-      <span>Company</span>
-      <span>Services</span>
-      <span>Contact</span>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#innovator-profile">Company</a></li>
+        <li><a href="#products-services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
+
+  
 
   <section id="hero">
     <div class="overlay">
@@ -30,9 +36,10 @@
           Sourcing cashew apples and nuts, pre-processing cashew nuts for sale, <br />
           and converting cashew apples into bio-ethanol for sustainability.
         </h1>
-        <button class="explore-btn">
+        <button class="explore-btn" onclick="location.href='#products-services'">
           Explore Our Services <span class="arrow">&#8594;</span>
         </button>
+        
       </div>
     </div>
   </section>
@@ -45,7 +52,11 @@
         chains and supporting agricultural communities.
       </h2>
       <button class="about-btn">
-        <span class="call-icon">&#9742;</span> More About Us
+        <a href="#contact" class="more-about-btn">
+          <i class="fas fa-phone-alt"></i> More About Us
+        </a>
+        
+        
       </button>
     </div>
   
@@ -149,6 +160,40 @@
       </div>
     </div>
   </section>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    
+    <div class="contact-container">
+      <!-- Left Side: Contact Details -->
+      <div class="contact-details">
+        <p><strong>Email:</strong> your@email.com</p>
+        <p><strong>Phone:</strong> +233 123 456 789</p>
+        <p><strong>Location:</strong> Accra, Ghana</p>
+  
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right Side: Contact Form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  
   
   
   
