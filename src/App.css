@@ -27,4 +27,150 @@ nav {
   #logo {
     height: 50px; /* Adjust size as needed */
   }
+
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/images/cashew-2197621_960_720.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better readability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 70%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  
+  .explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffcc00;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+  
+  .explore-btn:hover {
+    background: #e6b800;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+  }
+  
+  #about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #f5f5f5;
+    height: 100vh;
+  }
+  
+  .about-content {
+    max-width: 50%;
+  }
+  
+  .about-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-content h2 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .about-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+  
+  .about-btn:hover {
+    background: #e68900;
+  }
+  
+  .call-icon {
+    font-size: 1.2rem;
+  }
+  
+  .image-slider {
+    width: 40%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* .slider {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+  } */
+  
+ /* Wrapper for the slider */
+.slider-container {
+    width: 40%; /* Adjust based on layout */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Flex container for images */
+  .slider {
+    display: flex;
+    width: 300%; /* Three images */
+    animation: slide 15s infinite linear;
+  }
+  
+  /* Each image takes equal width */
+  .slider img {
+    width: 33.33%; /* Ensures a smooth transition */
+    flex-shrink: 0;
+  }
+  
+  /* Keyframes for a seamless loop */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-33.33%); }
+    66% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); } /* Loops back smoothly */
+  }
+  
   
