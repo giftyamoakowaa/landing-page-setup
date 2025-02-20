@@ -5,29 +5,33 @@
 }
 
 body {
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  width: 100vw; /* Ensures it doesn’t exceed the viewport */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white; /* Adjust as needed */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-  z-index: 1000; /* Ensures it stays on top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
 }
 
+
 #nav-links ul {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;
+}
+
+#nav-links ul.active {
+  display: flex; /* Show menu when active */
 }
 
 #nav-links ul li {
@@ -38,7 +42,6 @@ nav {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 #nav-links ul li a:hover {
@@ -62,18 +65,28 @@ section {
   background-color: red; /* Temporary for testing */
 }
 
+.mobile-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
 
+.mobile-menu {
+  display: block;
+}
 
   #hero {
     position: relative;
     width: 100%;
     height: 128vh;
-    background: url('/assets/images/cashew-2197621_960_720.jpg') no-repeat center center/cover;
+    background: url('/landing-page-setup/assets/images/cashew-2197621_960_720.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 80px 10px;
   }
+  
   
   .overlay {
     position: absolute;
@@ -486,4 +499,62 @@ section {
   }
 }
 
+footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.footer-container {
+  flex-direction: column;
+  text-align: center;
+}
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links ul li {
+  display: inline;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #28a745;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #28a745;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
